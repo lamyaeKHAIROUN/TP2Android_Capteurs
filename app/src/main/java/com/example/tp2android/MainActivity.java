@@ -4,14 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-     SensorManager mSensorManager;
-     SensorManager mySensorManager;
+public class MainActivity extends AppCompatActivity implements SensorEventListener {
+    SensorManager mSensorManager2;
+    SensorManager mySensorManager;
 
 
     @Override
@@ -23,39 +27,51 @@ public class MainActivity extends AppCompatActivity {
 
         TextView magnetic = findViewById(R.id.magnitic);
         TextView proximity = (TextView) findViewById(R.id.proximity);
+        ImageView verte = findViewById(R.id.verte);
+        verte.setVisibility(View.INVISIBLE);
+        ImageView noir = findViewById(R.id.noir);
+        noir.setVisibility(View.INVISIBLE);
+        ImageView rouge = findViewById(R.id.rouge);
+        rouge.setVisibility(View.INVISIBLE);
 
         //    listSensor();
 
-        // Capteur de magnetic
-        mSensorManager = (SensorManager)
+        // Capteur de ACCELEROMETER
+        mSensorManager2 = (SensorManager)
                 getSystemService(Context.SENSOR_SERVICE);
-        if (mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
+        if (mSensorManager2.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
                 != null) {
-             magnetic.setText("Success! There's a magnetometer sensor");
+            magnetic.setText("Success! There's a ACCELEROMETER sensor");
             Log.v("presence de capteur", "presence de capt");
         } else {
-            magnetic.setText("Failure! No magnetometer sensor");
+            magnetic.setText("Failure! No ACCELEROMETER sensor");
             Log.v("absence de capteur", "absence de capt");
 
         }
         // Capteur de proximity
         mySensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-
         if (mySensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)
                 != null) {
             proximity.setText("Success! There's a proximity sensor");
+
             Log.v("presence de proximity", "presence de proximity");
         } else {
             proximity.setText("Failure! No proximity sensor");
             Log.v("absence de proximity", "absence de proximity");
 
         }
+//Accelerometer
+        SensorManager sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
+
+        Boolean supported = sensorMgr.registerListener((SensorEventListener) this,
+                sensorMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+                SensorManager.SENSOR_DELAY_UI);
+        if (!supported) {
+            sensorMgr.unregisterListener
+                    ((SensorEventListener) this,sensorMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER));
+        }
 
 
-
-
-
-    }
 
     /*
    private void listSensor() {
@@ -81,8 +97,38 @@ public class MainActivity extends AppCompatActivity {
         }
         Toast.makeText(this, sensorDesc.toString(), Toast.LENGTH_LONG).show();
     }*/
-}
 
+
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent sensorEvent) {
+
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        ImageView verte = findViewById(R.id.verte);
+        ImageView noir = findViewById(R.id.noir);
+        ImageView rouge = findViewById(R.id.rouge);
+        switch (accuracy) {
+            case SensorManager.SENSOR_STATUS_ACCURACY_HIGH:
+                verte.setVisibility(View.VISIBLE);
+                noir.setVisibility(View.INVISIBLE);
+                rouge.setVisibility(View.INVISIBLE);
+            case SensorManager.SENSOR_STATUS_ACCURACY_MEDIUM:
+                verte.setVisibility(View.INVISIBLE);
+                noir.setVisibility(View.VISIBLE);
+                rouge.setVisibility(View.INVISIBLE);
+            case SensorManager.SENSOR_STATUS_ACCURACY_LOW:
+                verte.setVisibility(View.INVISIBLE);
+                noir.setVisibility(View.INVISIBLE);
+                rouge.setVisibility(View.VISIBLE);
+
+        }
+        Log.d("Sensor", sensor.getType() + ":" + accuracy);
+    }
+}
 
 
 

@@ -21,19 +21,50 @@
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:text=""
-             />
+            />
 
 
         <TextView
             android:id="@+id/proximity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
             android:layout_below="@id/magnitic"
+            android:padding="15dp"
 
             android:text=""
             tools:ignore="NotSibling" />
+        <TextView
+            android:id="@+id/acce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/proximity"
+            android:padding="15dp"
 
+            android:text="Acceleromter :"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:ignore="NotSibling" />
+
+        <ImageView
+            android:id="@+id/verte"
+            android:layout_width="700dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/acce"
+            app:srcCompat="@drawable/verte" />
+
+        <ImageView
+            android:id="@+id/noir"
+            android:layout_width="700dp"
+            android:layout_height="159dp"
+            android:layout_below="@id/verte"
+            app:srcCompat="@drawable/noir" />
+
+        <ImageView
+            android:id="@+id/rouge"
+            android:layout_width="600dp"
+            android:layout_height="400dp"
+            android:layout_below="@id/noir"
+            app:srcCompat="@drawable/rouge" />
 
     </RelativeLayout>
 
