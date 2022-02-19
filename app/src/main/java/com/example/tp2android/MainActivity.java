@@ -6,23 +6,58 @@ import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.widget.Toast;
-
-import java.util.List;
+import android.util.Log;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-   /* public SensorManager sensorManager = (SensorManager)
-            getSystemService(Context.SENSOR_SERVICE);*/
+     SensorManager mSensorManager;
+     SensorManager mySensorManager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
 
-        listSensor();
+        TextView magnetic = findViewById(R.id.magnitic);
+        TextView proximity = (TextView) findViewById(R.id.proximity);
+
+        //    listSensor();
+
+        // Capteur de magnetic
+        mSensorManager = (SensorManager)
+                getSystemService(Context.SENSOR_SERVICE);
+        if (mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
+                != null) {
+             magnetic.setText("Success! There's a magnetometer sensor");
+            Log.v("presence de capteur", "presence de capt");
+        } else {
+            magnetic.setText("Failure! No magnetometer sensor");
+            Log.v("absence de capteur", "absence de capt");
+
+        }
+        // Capteur de proximity
+        mySensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
+        if (mySensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)
+                != null) {
+            proximity.setText("Success! There's a proximity sensor");
+            Log.v("presence de proximity", "presence de proximity");
+        } else {
+            proximity.setText("Failure! No proximity sensor");
+            Log.v("absence de proximity", "absence de proximity");
+
+        }
+
+
+
+
 
     }
 
-
+    /*
    private void listSensor() {
        setContentView(R.layout.activity_main);
        SensorManager sensorManager = (SensorManager)
@@ -45,5 +80,9 @@ public class MainActivity extends AppCompatActivity {
             sensor.getMinDelay() + "\r\n");
         }
         Toast.makeText(this, sensorDesc.toString(), Toast.LENGTH_LONG).show();
-    }
+    }*/
 }
+
+
+
+
