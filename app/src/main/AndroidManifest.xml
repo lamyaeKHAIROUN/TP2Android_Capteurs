@@ -18,6 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".OrientationActiviy"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SensorList"
+            android:exported="true">
+        </activity>
     </application>
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
