@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnBasculer = (Button) findViewById(R.id.monBouton);
+        Button btn1 = (Button) findViewById(R.id.monBouton1);
 
-        btnBasculer
+        btn1
                 .setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent1 = new Intent(MainActivity.this, SensorList.class);
@@ -52,6 +52,33 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent1);
                     }
                 });
+        Button btn3 = (Button) findViewById(R.id.monBoutton3);
+
+        btn3
+                .setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        Intent intent1 = new Intent(MainActivity.this, Accelerometer.class);
+                        startActivity(intent1);
+                    }
+                });
+        Button btn4 = (Button) findViewById(R.id.monBoutton4);
+
+        btn4
+                .setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        Intent intent1 = new Intent(MainActivity.this, Direction.class);
+                        startActivity(intent1);
+                    }
+                });
+       Button btn6=(Button) findViewById(R.id.monBoutton6);
+
+       btn6
+           .setOnClickListener(new View.OnClickListener() {
+           public void onClick(View v) {
+               Intent intent1 = new Intent(MainActivity.this, Proximity.class);
+               startActivity(intent1);
+           }
+       });
 
 
     }

@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="0dp">
     <Button
-        android:id="@+id/monBouton"
+        android:id="@+id/monBouton1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:insetLeft="100dp"
@@ -35,10 +35,10 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="115dp"
-        android:layout_below="@id/monBouton"
+        android:layout_below="@id/monBouton1"
         />
         <Button
-            android:id="@+id/monBouton3"
+            android:id="@+id/monBoutton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="100dp"
@@ -50,6 +50,35 @@
             tools:layout_editor_absoluteY="115dp"
             android:layout_below="@id/monBouton2"
             />
+        <Button
+            android:id="@+id/monBoutton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="100dp"
+            android:insetRight="100dp"
+            android:padding="15dp"
+            android:text="Direction"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="115dp"
+            android:layout_below="@id/monBoutton3"
+            />
+
+
+        <Button
+            android:id="@+id/monBoutton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="100dp"
+            android:insetRight="100dp"
+            android:padding="15dp"
+            android:text="Proximity"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="115dp"
+            android:layout_below="@id/monBoutton4"
+            />
+
 
 </RelativeLayout>
 
