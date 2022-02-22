@@ -51,6 +51,23 @@
             android:layout_below="@id/monBouton2"
             />
 
+        <Button
+            android:id="@+id/monBouton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="100dp"
+            android:insetRight="100dp"
+            android:padding="15dp"
+            android:text="proximity"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="115dp"
+            android:layout_below="@id/monBouton3"
+            />
+
+
+
+
 </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
