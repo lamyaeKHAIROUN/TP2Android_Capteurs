@@ -2,12 +2,23 @@ package com.example.tp2android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.Loader;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
+import android.view.Surface;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     SensorManager mSensorManager2;
@@ -41,15 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent1);
                     }
                 });
-        Button btn4 = (Button) findViewById(R.id.monBouton4);
 
-        btn4
-                .setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
-                        Intent intent1 = new Intent(MainActivity.this, Proximity.class);
-                        startActivity(intent1);
-                    }
-                });
 
     }
 }
