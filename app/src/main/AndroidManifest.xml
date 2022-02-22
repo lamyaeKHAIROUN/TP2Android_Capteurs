@@ -32,6 +32,16 @@
             android:exported="true"
             tools:ignore="DuplicateActivity">
         </activity>
+        <activity
+            android:name=".Accelerometer"
+            android:exported="true"
+            tools:ignore="DuplicateActivity">
+        </activity>
+        <activity
+            android:name=".Direction"
+            android:exported="true"
+            tools:ignore="DuplicateActivity">
+        </activity>
     </application>
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
