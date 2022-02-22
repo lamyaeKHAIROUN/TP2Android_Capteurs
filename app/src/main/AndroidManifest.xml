@@ -13,11 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TP2Android">
         <activity
-            android:name=".Secouer"
-            android:exported="false"
-            android:label="@string/title_activity_secouer"
-            android:theme="@style/Theme.TP2Android.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -27,23 +22,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".OrientationActiviy"
-            android:exported="true" />
-        <activity
             android:name=".SensorList"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".SensorPresent"
             android:exported="true"
-            tools:ignore="DuplicateActivity" />
+            tools:ignore="DuplicateActivity"></activity>
         <activity
-            android:name=".Accelerometer"
-            android:exported="true"
-            tools:ignore="DuplicateActivity" />
+            android:name=".Proximity"
+            android:exported="true"></activity>
         <activity
             android:name=".Direction"
-            android:exported="true"
-            tools:ignore="DuplicateActivity" />
+            android:exported="true"></activity>
+        <activity
+            android:name=".Accelerometer"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

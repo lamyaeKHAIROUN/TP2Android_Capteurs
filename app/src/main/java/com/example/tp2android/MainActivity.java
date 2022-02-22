@@ -21,6 +21,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    SensorManager mSensorManager2;
+    SensorManager mySensorManager;
+     Display mDisplay;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnBasculer = (Button) findViewById(R.id.monBouton);
+        Button btn1 = (Button) findViewById(R.id.monBouton1);
 
-        btnBasculer
+        btn1
                 .setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent1 = new Intent(MainActivity.this, SensorList.class);
@@ -47,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent1);
                     }
                 });
-
-        Button btn3 = (Button) findViewById(R.id.monBouton3);
+        Button btn3 = (Button) findViewById(R.id.monBoutton3);
 
         btn3
                 .setOnClickListener(new View.OnClickListener() {
@@ -57,25 +61,25 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent1);
                     }
                 });
+        Button btn4 = (Button) findViewById(R.id.monBoutton4);
 
-
-        Button btn4 = (Button) findViewById(R.id.monBouton4);
-
-        btn4.setOnClickListener(new View.OnClickListener() {
+        btn4
+                .setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent1 = new Intent(MainActivity.this, Direction.class);
                         startActivity(intent1);
                     }
                 });
+       Button btn6=(Button) findViewById(R.id.monBoutton6);
 
-        Button btn5 = (Button) findViewById(R.id.monBouton5);
+       btn6
+           .setOnClickListener(new View.OnClickListener() {
+           public void onClick(View v) {
+               Intent intent1 = new Intent(MainActivity.this, Proximity.class);
+               startActivity(intent1);
+           }
+       });
 
-        btn5.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent1 = new Intent(MainActivity.this, Direction.class);
-                startActivity(intent1);
-            }
-        });
 
     }
 }
