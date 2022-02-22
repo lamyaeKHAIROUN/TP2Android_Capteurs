@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.tp2android">
 
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TP2Android">
+        <activity
+            android:name=".Secouer"
+            android:exported="false"
+            android:label="@string/title_activity_secouer"
+            android:theme="@style/Theme.TP2Android.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,28 +28,22 @@
         </activity>
         <activity
             android:name=".OrientationActiviy"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".SensorList"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".SensorPresent"
             android:exported="true"
-            tools:ignore="DuplicateActivity">
-        </activity>
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".Accelerometer"
             android:exported="true"
-            tools:ignore="DuplicateActivity">
-        </activity>
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".Direction"
             android:exported="true"
-            tools:ignore="DuplicateActivity">
-        </activity>
+            tools:ignore="DuplicateActivity" />
     </application>
-    <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
 </manifest>

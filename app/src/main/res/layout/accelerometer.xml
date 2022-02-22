@@ -10,36 +10,29 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="0dp">
+
         <TextView
-            android:id="@+id/vert"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/fongE"
+            android:layout_width="379dp"
+            android:layout_height="121dp"
             android:padding="15dp"
             android:text=""
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="192dp" />
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="181dp" />
+
 
         <TextView
-            android:id="@+id/noire"
+            android:id="@+id/acceleration"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="273dp"
+            android:layout_below="@id/fongE"
+
             android:padding="15dp"
-
-            android:text=""
+            android:text="Acceleration"
+            android:textSize="30dp"
             tools:ignore="MissingConstraints,NotSibling"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="126dp" />
-
-        <TextView
-            android:id="@+id/rouge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-
-            android:text=""
-            tools:ignore="MissingConstraints,NotSibling"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="126dp" />
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="453dp" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
