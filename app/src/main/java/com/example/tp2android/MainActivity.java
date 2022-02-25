@@ -21,10 +21,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    SensorManager mSensorManager2;
-    SensorManager mySensorManager;
-     Display mDisplay;
-
 
 
     @Override
@@ -35,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn1 = (Button) findViewById(R.id.monBouton1);
 
-        btn1
-                .setOnClickListener(new View.OnClickListener() {
+        btn1.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent1 = new Intent(MainActivity.this, SensorList.class);
                         startActivity(intent1);
@@ -45,17 +40,17 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn2 = (Button) findViewById(R.id.monBouton2);
 
-        btn2
-                .setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent1 = new Intent(MainActivity.this, SensorPresent.class);
                         startActivity(intent1);
                     }
                 });
+
+
         Button btn3 = (Button) findViewById(R.id.monBoutton3);
 
-        btn3
-                .setOnClickListener(new View.OnClickListener() {
+        btn3.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent1 = new Intent(MainActivity.this, Accelerometer.class);
                         startActivity(intent1);
@@ -63,24 +58,40 @@ public class MainActivity extends AppCompatActivity {
                 });
         Button btn4 = (Button) findViewById(R.id.monBoutton4);
 
-        btn4
-                .setOnClickListener(new View.OnClickListener() {
+        btn4.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent1 = new Intent(MainActivity.this, Direction.class);
                         startActivity(intent1);
                     }
                 });
+
+
+        Button btn5 = (Button) findViewById(R.id.monBouton5);
+
+        btn5.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        Intent intent1 = new Intent(MainActivity.this, Secouer.class);
+                        startActivity(intent1);
+                    }
+                });
+
        Button btn6=(Button) findViewById(R.id.monBoutton6);
 
-       btn6
-           .setOnClickListener(new View.OnClickListener() {
+       btn6.setOnClickListener(new View.OnClickListener() {
            public void onClick(View v) {
-               Intent intent1 = new Intent(MainActivity.this, Proximity.class);
-               startActivity(intent1);
+              // Intent intent1 = new Intent(MainActivity.this, Proximity.class);
+              // startActivity(intent1);
            }
        });
 
+        Button btn7 = (Button) findViewById(R.id.monBoutton7);
 
+        btn7.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent1 = new Intent(MainActivity.this, Geolocalisation.class);
+                startActivity(intent1);
+            }
+        });
     }
 }
 

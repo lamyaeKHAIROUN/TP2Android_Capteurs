@@ -36,14 +36,6 @@ public class Accelerometer extends AppCompatActivity implements SensorEventListe
         accelerationText=findViewById(R.id.acceleration);
         SensorManager sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
 
-        Boolean supported = sensorMgr.registerListener(this,
-                sensorMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
-                SensorManager.SENSOR_DELAY_UI);
-        if (!supported) {
-            sensorMgr.unregisterListener
-                    (this,sensorMgr.getDefaultSensor(Sensor.TYPE_ACCELEROMETER));
-        }
-
     }
 
     protected void onResume() {

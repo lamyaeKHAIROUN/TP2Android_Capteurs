@@ -64,7 +64,19 @@
             android:layout_below="@id/monBoutton3"
             />
 
-
+        <Button
+            android:id="@+id/monBouton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="100dp"
+            android:insetRight="100dp"
+            android:padding="15dp"
+            android:text="Shake"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="115dp"
+            android:layout_below="@id/monBoutton4"
+            />
         <Button
             android:id="@+id/monBoutton6"
             android:layout_width="match_parent"
@@ -76,23 +88,22 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="115dp"
-            android:layout_below="@id/monBoutton4"
+            android:layout_below="@id/monBouton5"
             />
+
         <Button
-            android:id="@+id/monBouton5"
+            android:id="@+id/monBoutton7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:insetLeft="100dp"
             android:insetRight="100dp"
             android:padding="15dp"
-            android:text="Secouer"
+            android:text="Geolocalisation"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="115dp"
-            android:layout_below="@id/monBouton4"
+            android:layout_below="@id/monBoutton6"
             />
 
-
 </RelativeLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
